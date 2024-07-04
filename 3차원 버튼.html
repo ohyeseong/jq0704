@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body{
+            background-color: rgb(28, 0, 54);
+            text-align: center;
+            padding: 50px 0;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .button{
+            display: inline-block;
+            padding: 20px 70px;
+            border: 1px solid white;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-image: linear-gradient(rgb(35, 95, 180), rgb(123, 123, 248));
+            box-shadow: 0 6px 0 rgb(0, 119, 223), 
+                        0 3px 15px rgba(0, 0, 0, 0.5), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+                        inset 0 0 3px rgba(255, 255, 255, 0.5);
+            transform: rotateX(-30deg);
+            transition: all 0.6s;
+        }
+
+        .button:hover{
+            background-image: linear-gradient(rgb(123, 123, 248),rgb(35, 95, 180));
+        }
+        
+        .button:active{
+            transform: rotateX(0deg);
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="button">press me</a>
+</body>
+</html>

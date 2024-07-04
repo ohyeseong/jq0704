@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="8;url=앞면 뒷면.html">
+    <!-- <meta http-equiv="refresh" content="8;url=앞면 뒷면.html"> 8초후에 지금 html에서 해당 페이지로 이동 -->
+
+    <title>Document</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body{
+            height: 100%;
+        }
+
+        body{
+            background-image: linear-gradient(black, white);
+        }
+
+        .cube{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform-style: preserve-3d;
+            animation: cube_mov infinite 4s alternate;
+        }
+
+        .face{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+        }
+
+        .front{
+            background-color: red;
+            transform: translateZ(50px);
+        }
+        .back{
+            background-color: orangered;
+            transform: translateZ(-50px);
+        }
+        .left{
+            background-color: orange;
+            transform: translateX(50px) rotateY(90deg);
+        }
+        .right{
+            background-color: yellow;
+            transform: translateX(-50px) rotateY(90deg);
+        }
+        .top{
+            background-color: yellowgreen;
+            transform: translateY(50px) rotateX(90deg);
+        }
+        .bottom{
+            background-color: green;
+            transform: translateY(-50px) rotateX(90deg);
+        }
+        
+        @keyframes cube_mov{
+            100%{
+                transform: rotateX(360deg) rotateY(180deg) rotateZ(270deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="cube">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face left">3</div>
+        <div class="face right">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+h1{
+    text-align: center;
+}
+
+/* 인라인 블럭 */
+
+.list{
+    background-color: rgb(32, 2, 61);
+    margin: 100px 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.list li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.list li a{
+    display: block;
+    color: white;
+    width: 200px;
+    height: 100px;
+    border: 2px solid white;
+    line-height: 96px;
+    font-size: 20px;
+    font-style: italic;
+    background-color: blue;
+}
+/* button, img태그는 예외적이지만 width, height값이 먹힘 */
+
+.bg{
+    background-color: hotpink !important;
+    border: 2px solid black !important;
+}
+
+/* 플롯 */
+
+.list2{
+    background-color: blue;
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+/* 부모의 높이가 걸려있지 않고 부모한테 overflow: hidden을 걸어줄경우 자식들의 높이값이 인지해서 걸려짐 */
+
+.list2 li{
+    float: left;
+}
+/* 플롯시킬경우 부모한테 width값을 상속받을수 없고 부모의 높이값이 없어짐(부모한테 높이가 걸려있지 않은경우) */
+
+.list2 li a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid white;
+    /* border-radius: 250px; */
+}
+
+.txt{
+    text-shadow: 0 0 20px yellow;
+    color: white;
+    font-weight: bold;
+}
+
+/* 플렉스 구조 */
+.list3{
+    margin-top: 50px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.list3 li{
+    padding: 10px 0;
+}
+
+.list3 li a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    /* border-radius: 20px; */
+    text-align: center;
+    line-height: 36px;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.over{
+    box-shadow: 0 5px black;
+    border-radius: 20px;
+}
+
+/* 그리드 */
+.list4{
+    background-color: yellowgreen;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.list4 li{}
+.list4 li a{
+    display: block;
+    background-color: yellow;
+    padding: 20px;
+    text-align: center;
+}
+
+.b{
+    background-color: orange !important;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px gray;
+}
+
+.grid_t{
+    text-shadow: 0 0 2px red !important;
+    color: black !important;
+}

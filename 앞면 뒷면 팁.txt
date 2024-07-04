@@ -1,0 +1,14 @@
+1 .box -> .flip (.face.front / .face.back)생성
+
+2 face에 width, height값 및 스타일 먼저 주기
+
+3 front와 back의 내용값 및 스타일 주고 back에 rotateY로 180도
+
+4 face안에 front와 back이 겹쳐야 하니 앱솔 걸어주고 .flip에 포지션 릴리티브 걸어주면 겹쳐지는데 뒷면이 보이게 되니 .face에 backface-visibility: hidden; 걸어줘서 앞면이 보이게 설정
+
+5 .box:hover .flip에 transform: rotateY(180deg);걸어주고 .flip에 자연스러운 효과를 위해 transition 걸어주기
+
+6 backface가 걸려있기에 3차원으로 걸어줘야 뒤에 화면이 보이기에 .flip에 transform-style: preserve-3d; 걸어주면 뒷면이 보이게 된다
+       
+7 좀더 정밀한 효과를 위해 .box에 perspective를 500px 걸어준다
+
